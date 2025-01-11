@@ -1,0 +1,8 @@
+- Index page that renders when not logged
+- Index page redirects to authenticated routes (Groove main page) when logged in
+- Main groove page has the styled Mantine side bar
+
+
+- Split off current project state:
+---- Indie stack with Mantine
+---- Upgraded to vite instead of remix compiler 
