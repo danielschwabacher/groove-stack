@@ -4,7 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vite dev --port=${PORT:-3000}",
     "build": "vite build",
     "start": "NODE_ENV=production node ./build/server/index.js",
     "format": "prettier --write .",
@@ -12,8 +12,9 @@
     "setup": "prisma generate && prisma migrate deploy && prisma db seed",
     "start:mocks": "NODE_OPTIONS=\"--import ./mocks/index.js\" vite ./build/server/index.js",
     "test": "vitest",
-    "test:e2e:dev": "start-server-and-test dev http://localhost:3000 \"npx cypress open\"",
-    "test:e2e:run": "cross-env PORT=8811 start-server-and-test start:mocks http://localhost:8811 \"npx cypress run\"",
+    "cy:open": "cypress open",
+    "test:e2e:dev": "cross-env PORT=3000 npm run dev & npm run cy:open",
+    "test:e2e:run": "cross-env PORT=8811 npm run dev & npx cypress run",
     "typecheck": "tsc && tsc -p cypress",
     "validate": "npm-run-all --parallel \"test -- --run\" lint typecheck test:e2e:run"
   },
