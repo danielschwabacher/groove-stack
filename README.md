@@ -5,7 +5,7 @@ This is a fork of the `indie-stack` which adds support for the Mantine component
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
 ```sh
-npx create-remix@latest --template me/groove-stack
+npx create-remix@latest --template danielschwabacher/groove-stack
 ```
 
 ## What's in the stack
@@ -50,11 +50,15 @@ The database seed script creates a new user with some data you can use to get st
 
 ### Relevant code:
 
-This is a pretty simple note-taking app, but it's a good example of how you can build a full stack app with Prisma and Remix. The main functionality is creating users, logging in and out, and creating and deleting notes.
+This is a simple app that forms the basis for generic SaaS applications. It does the following:
 
-- creating users, and logging in and out [./app/models/user.server.ts](./app/models/user.server.ts)
-- user sessions, and verifying them [./app/session.server.ts](./app/session.server.ts)
-- creating, and deleting notes [./app/models/note.server.ts](./app/models/note.server.ts)
+- Shows a bare-bones marketing page until a user logs in
+- Once logged in, presents the user with a generic sidebar navigation system + the option to logout.
+
+Refer to the following sections to help navigate the codebase:
+
+- Creating users + login and logout: [./app/models/user.server.ts](./app/models/user.server.ts)
+- User sessions + verification: [./app/session.server.ts](./app/session.server.ts)
 
 ## Deployment
 

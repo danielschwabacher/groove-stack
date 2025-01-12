@@ -1,5 +1,5 @@
 {
-  "name": "indie-stack-e76d",
+  "name": "groove-stack",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -27,6 +27,7 @@
     "@mantine/core": "^7.15.3",
     "@mantine/hooks": "^7.15.3",
     "@prisma/client": "^5.22.0",
+    "@radix-ui/react-icons": "^1.3.2",
     "@remix-run/css-bundle": "*",
     "@remix-run/node": "*",
     "@remix-run/react": "*",
