@@ -4,7 +4,7 @@ import "@mantine/core/styles.css";
 
 import type { MetaFunction } from "@remix-run/node";
 import { useOptionalUser } from "~/utils";
-import { MarketingHomePage } from "~/components/MarketingHomePage";
+import { MarketingHomePage } from "~/pages/MarketingHomePage";
 
 export const meta: MetaFunction = () => [{ title: "Groove Stack" }];
 

@@ -12,6 +12,11 @@
   -webkit-text-fill-color: transparent;
 }
 
+.main {
+  height: 100%;
+  width: 100%;
+}
+
 .themeIconBackground {
   background: rgba(var(--mantine-primary-color-filled), 0.07);
 }

@@ -107,7 +107,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
         <ColorSchemeScript />
       </head>
-      <body>
+      <body style={{ height: "100vh", width: "100vw" }}>
         <MantineProvider theme={mantineTheme}>{children}</MantineProvider>
         <ScrollRestoration />
         <Scripts />
